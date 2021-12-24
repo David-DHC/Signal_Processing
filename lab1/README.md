@@ -6,15 +6,15 @@
 
 ### 一、实验需求：
 
--   在`square_wave`里正确实现原函数$f(t)$
--   解出$f(t)$的傅里叶级数的$a_n$和$b_n$，并在`fourier_coefficient`中加以实现
+-   在`square_wave`里正确实现原函数`f(t)`
+-   解出`f(t)`的傅里叶级数的`an`和`bn`，并在`fourier_coefficient`中加以实现
 -   改变`N_fourier`的值，运行程序，输出视频
 
 
 
 ### 二、实验过程：
 
-#### (1) 实现原函数$f(t)$
+#### (1) 实现原函数`f(t)`
 
 ```python
 def square_wave(t):
@@ -35,15 +35,10 @@ def square_wave(t):
 
 
 
-#### (2) 计算原函数的傅里叶级数的$a_n$和$b_n$。
-
-1.   $a_0=\frac 12$
-2.   $a_n=\frac T2 \int_0^{\frac T2} \frac 12 \cos n\omega_0t dt=0$
-3.   $b_n=\frac T2 \int_0^{\frac T2} \frac 12 \sin n\omega_0t dt=\frac{1-\cos (n\pi)}{n\pi}$，因此当$n$为奇数时$b_n=\frac{2}{n\pi}$，否则$b_n=0$。
+#### (2) 计算原函数的傅里叶级数的`an`和`bn`。
 
 
-
-#### (3) 将上述$a_n$和$b_n$写在代码中实现
+#### (3) 将上述`an`和`bn`写在代码中实现
 
 ```python
 def fourier_coefficient(n):
